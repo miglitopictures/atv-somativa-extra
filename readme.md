@@ -66,7 +66,7 @@ for (int i = 0; i < numProdutos; i++){
     scanf("%f%*c", &(produtos + i)->preco);
 }
 ```
-Listo os produtos com imprimir_produtos() e retorno a memória alocada para produtos com free().
+Listo os produtos com imprimir_produtos() e "devolvo" a memória alocada para produtos com free().
 ```c
 imprimir_produtos(produtos, numProdutos);
 free(produtos);
