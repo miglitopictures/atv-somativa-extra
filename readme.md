@@ -15,16 +15,16 @@ float *pricePtr = &price;
 Utilizo o ponteiro float *preco em aplicar_desconto para receber o endereço de uma variável float e modifico seu valor internamente com desreferência.
 ```c
 void aplicar_desconto(float *preco, float desconto){
-*preco *= 1 + ( desconto / 100 );
-    }
+    *preco *= 1 + ( desconto / 100 );
+}
 ```
 ---
 ## Atividade 3
 Na atividade 3 introduzo a struct Produto:
 ```c
 typedef struct {
-int id;
-float preco;
+    int id;
+    float preco;
 } Produto;
 // Usei o typedef pra ficar mais fácil de ler nos argumentos da função;
 ```
@@ -43,7 +43,7 @@ void imprimir_produtos(Produto *produtos, int qtd);
 Que utiliza aritmética de ponteiros para percorrer uma lista de produtos e imprimir seus valores:
 ```c
 for (int i =0; i < qtd; i++)
-printf("id: %d | preço: R$%.2f\n", (produtos + i)->id, (produtos + i)->preco);
+    printf("id: %d | preço: R$%.2f\n", (produtos + i)->id, (produtos + i)->preco);
 ```
 ---
 ## Atividade 5
@@ -59,11 +59,11 @@ produtos = malloc(sizeof(Produto) * numProdutos);
 Depois percorro o array, "preenchendo" os produtos com valores definidos pelo usuário:
 ```c
 for (int i = 0; i < numProdutos; i++){
-printf("== Produto %02d ==\n", i+1);
-printf("ID do produto: ");
-scanf("%d%*c", &(produtos + i)->id);
-printf("Preço do produto: ");
-scanf("%f%*c", &(produtos + i)->preco);
+    printf("== Produto %02d ==\n", i+1);
+    printf("ID do produto: ");
+    scanf("%d%*c", &(produtos + i)->id);
+    printf("Preço do produto: ");
+    scanf("%f%*c", &(produtos + i)->preco);
 }
 ```
 Listo os produtos com imprimir_produtos() e retorno a memória alocada para produtos com free().
