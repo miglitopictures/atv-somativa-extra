@@ -30,12 +30,6 @@ int main(void){
     produtos[2].id = 33;
     produtos[2].preco = 80.0;
 
-    // printf("Valor original: R$%.2f\n", produtos[0].preco);
-
-    // aplicar_desconto(&produtos[0], 10);
-
-    // printf("Valor com desconto: R$%.2f\n\n", produtos[0].preco);
-
     imprimir_produtos(produtos, 3);
     return 0;
 }
