@@ -28,7 +28,7 @@ float preco;
 } Produto;
 // Usei o typedef pra ficar mais fácil de ler nos argumentos da função;
 ```
-E modifico a função aplicar_desconto(), agora recebendo como primeiro parâmetro um ponteiro para Produto e utilizando a sintaxe de seta `->` para modificar o valor do membro `price` internamente:
+E modifico a função aplicar_desconto(), agora recebendo como primeiro parâmetro um ponteiro para Produto e utilizando a sintaxe de seta `->` para modificar o valor do membro `preco` internamente:
 ```c
 void aplicar_desconto(Produto *produto, float desconto){
     produto->preco *= 1 + ( desconto / 100 );
